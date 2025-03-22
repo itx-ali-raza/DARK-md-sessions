@@ -12,9 +12,9 @@ app.use('/code', code);
 app.use('/pair',async (req, res, next) => {
 res.sendFile(__path + '/pair.html')
 })
-app.use('/',async (req, res, next) => {
-res.sendFile(__path + '/wasipage.html')
-})
+app.use('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/wasipage.html);
+});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(PORT, () => {
