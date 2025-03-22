@@ -16,13 +16,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define routes
-app.use('/qr', qr);
+app.use('/wasiqr', qr);
 app.use('/code', code);
 app.use('/pair', (req, res) => {
     res.sendFile(path.join(__dirname, '/pair.html'));
 });
 app.use('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/index.html'));
+    res.sendFile(path.join(__dirname, '/wasipage.html);
 });
 
 // Start the server
