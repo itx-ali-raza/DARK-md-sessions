@@ -14,7 +14,7 @@ res.sendFile(__path + '/pair.html')
 })
 app.use('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/wasipage.html);
-});
+})
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(PORT, () => {
